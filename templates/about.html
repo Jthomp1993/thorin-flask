@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    {% for number in list_of_numbers %}
-        <p>{{ number }}</p>
-    {% endfor %}
+    
     <h2>{{ page_title }}</h2>
     <p>
         Everton and Everton in the Community are increasing activity on their ‘Blue Family’ campaign in response to the latest
@@ -21,91 +19,23 @@
         are further stepping up the ‘Blue Family’ efforts.
     </p>
 
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Dominic Calvert-Lewin</h3>
-                <p>
-                    Everton completed the signing of Dominic Calvert-Lewin on transfer deadline day in August 2016.
-                
-                    The player penned a four-year deal and joined for an undisclosed fee, linking up with David Unsworth’s Under-23s,
-                    and gradually maturing into one of Eveton's most influential attackers.
-                
-                
-                    Calvert-Lewin finished locked together with Richarlison on 13 Premier League goals - and 15 in all competitions - to
-                    split leading-marksman honours in a 2019/20 campaign when he flourished after being handed the Club's fabled number
-                    9 jersey.
-                
-                    His progress was recognised at the back end of that season when new manager Carlo Ancelotti underlined his
-                    admiration for the forward by tying him to a renewed five-year contract.
-                
-                    Calvert-Lewin struck eight times during 2018/19 and in the season's closing months emerged as the first-choice
-                    striker of Ancelotti's predecessor, Marco Silva, starting 10 of Everton's final 11 top-flight games. His run of
-                    starting appearances coincided with an excellent period for the Blues, which included wins over Chelsea, Arsenal and
-                    Manchester United.
-                </p>
-        </div>
-        <div class="col-md-5">
-            <img src="https://images.newindianexpress.com/uploads/user/imagelibrary/2020/10/1/w1200X800/Dominic_AP_.jpg" alt="DCL">
-        </div>
-    </div>
+    {% for member in company %}
 
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Richarlison</h3>
-                <p>
-                    Richarlison finished both his opening two seasons with Everton as the Club's joint-top scorer – in the Premier
-                    League and across all competitions.
-                
-                
-                    In a personally excellent 2019/20 – which Richarlison began flushed with confidence following his involvement in
-                    Brazil's home Copa America success during the off season – he scored 13 league goals from 36 appearances and added
-                    two more in the Carabao Cup.
-                
-                
-                    Those tallies mirrored the returns of fellow striker Dominic Calvert-Lewin.
-                
-                    Equally, Richarlison's 13 top-flight strikes equalled his total from the previous season, when he shared top-scoring
-                    honours with Gylfi Sigurdsson.
-                
-                    The player's 15 goals in all-competitions surpassed the 14 he netted in 2018/19 – a number again matched by
-                    midfielder Sigurdsson.
-                
-                    Richarlison joined Everton from Watford in July 2018, reuniting with then manager Marco Silva, who brought the
-                    attacker to England 12 months previously when Hornets boss.
-                </p>
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h3>{{ member.name }}</h3>
+                    <p>{{ member.description }}</p>
+            </div>
+            <div class="col-md-5">
+                <img src="{{ member.image_source }}" alt="" class="featurette-image image-responsive">
+            </div>
         </div>
-        <div class="col-md-5">
-            <img src="https://tmssl.akamaized.net/images/foto/normal/richarlison-fc-everton-1575395869-27960.jpg" alt="Richarlison">
-        </div>
-    </div>
 
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>James Rodriguez</h3>
-                <p>
-                    James Rodriguez reunited with Carlo Ancelotti at Goodison Park in summer 2020 following prolific spells with the
-                    Italian manager at Real Madrid and Bayern Munich.
-                
-                    Forward James initially linked up with Ancelotti in Spain following a breathtaking 2014 World Cup for Colombia.
-                
-                    The Golden Boot winner for his six strikes at the competition in Brazil – including one against Uruguay voted goal
-                    of the tournament – James duly flourished with Real after transferring from Monaco for a reported £71m fee.
-                
-                    He directly contributed to 26 goals – scoring 13 times and adding 13 assists – in 29 La Liga matches in 2014/15, a
-                    return which secured his position in the division’s team of the year and led to him being crowned La Liga’s best
-                    midfielder.
-                
-                    James was a Champions League winner with Real in 2015/16 and 2016/17 and in the second of those campaigns was part
-                    of a team which added the La Liga, UEFA Super Cup and FIFA Club World Cup titles.
-                
-                    Ancelotti took James to Bayern Munich for a two-year-loan in 2017, the player claiming successive Bundesliga titles
-                    and directly contributing to 29 goals in 43 league appearances – 32 starts – during his German stay.
-                </p>
-        </div>
-        <div class="col-md-5">
-            <img src="https://www.expressandstar.com/resizer/aRIBMwoFCVgzlYgevqzN48JukDM=/1200x0/cloudfront-us-east-1.images.arcpublishing.com/mna/3ZP5X6AJXFFXZKKBYJTNYWVQNU.jpg" alt="James">
-        </div>
-    </div>
+        <hr class="featurette-divider">
+
+    {% endfor %}
+
+    
 
     
     
